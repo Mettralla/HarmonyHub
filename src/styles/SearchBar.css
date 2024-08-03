@@ -1,0 +1,14 @@
+.search-bar {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}
