@@ -1,0 +1,38 @@
+.navbar-item {
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 4px;
+}
+
+.navbar-item.light-mode:hover {
+    background-color: #eeebeb;
+}
+
+.navbar-item.dark-mode:hover {
+    background-color: #444;
+}
+
+.menu-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding-left: 12px;
+}
+
+.navbar__list {
+    list-style-type: none;
+}
+
+.itemLogo {
+    margin-right: 6px;
+}
+
+.navbar__li {
+    position: relative;
+    font-weight: 400;
+}
+
+.navbar__li-box:hover {
+    border-left: 7px solid #8c1eec;
+    cursor: pointer;
+}
