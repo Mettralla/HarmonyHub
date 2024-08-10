@@ -1,0 +1,44 @@
+.album-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.album-card:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.album-cover {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.album-info {
+    flex-grow: 1;
+    padding-left: 1rem;
+}
+
+.album-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.album-year {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0;
+}
+
+.album-play {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}

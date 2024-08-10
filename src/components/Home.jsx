@@ -5,6 +5,7 @@ import RecommendedArtists from "./RecommendedArtists";
 import MusicPlayer from "./MusicPlayer";
 import "../styles/Home.css"
 
+
 function Home() { 
   return (
     <div className="section">

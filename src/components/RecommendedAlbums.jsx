@@ -2,7 +2,8 @@ import PropTypes from "prop-types";
 import "../styles/RecommendedAlbums.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import CoverDefault from "../assets/cover-default.png"
+import CoverDefault from "../assets/cover-default.png";
+import { Link } from "react-router-dom";
 
 RecommendedAlbums.propTypes = {
   albums: PropTypes.array,
@@ -36,7 +37,10 @@ function RecommendedAlbums() {
           <h2 className="title is-4">Álbumes Recomendados</h2>
         </div>
         <div className="level-right">
-          <button className="button is-link">Ver más</button>
+          {/* <button className="button is-link">Ver más</button> */}
+          <Link to="/albums" className="button is-link">
+            Ver más
+          </Link>
         </div>
       </div>
       <div className="columns is-mobile">
