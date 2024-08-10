@@ -18,7 +18,7 @@ function RecommendedSongs() {
     const fetchSongs = async () => {
       try {
         const response = await axios.get(
-          "http://sandbox.academiadevelopers.com/harmonyhub/songs?page_size=5"
+          "https://sandbox.academiadevelopers.com/harmonyhub/songs?page_size=5"
         );
         setSongs(response.data.results);
       } catch (error) {

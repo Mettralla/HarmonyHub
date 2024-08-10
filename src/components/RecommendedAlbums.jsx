@@ -16,7 +16,7 @@ function RecommendedAlbums() {
       try {
         axios
         .get(
-          "http://sandbox.academiadevelopers.com/harmonyhub/albums?page_size=5"
+          "https://sandbox.academiadevelopers.com/harmonyhub/albums?page_size=5"
         )
         .then((response) => {
           setAlbums(response.data.results);

@@ -16,7 +16,7 @@ function RecommendedArtists() {
     const fetchArtist = async () => {
       try {
         const response = await axios.get(
-          "http://sandbox.academiadevelopers.com/harmonyhub/artists?page_size=5"
+          "https://sandbox.academiadevelopers.com/harmonyhub/artists?page_size=5"
         );
         setArtist(response.data.results)
       } catch (error) {
