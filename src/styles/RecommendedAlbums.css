@@ -1,0 +1,15 @@
+.album-row {
+    margin-top: 20px;
+}
+
+.album-row .card {
+    cursor: pointer;
+}
+
+.album-row .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.album-row .card-content {
+    text-align: center;
+}

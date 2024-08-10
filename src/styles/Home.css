@@ -1,0 +1,18 @@
+.recommended-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.recommended-artists,
+.recommended-songs {
+    flex: 1;
+}
+
+.recommended-artists {
+    margin-right: 1rem;
+}
+
+.recommended-songs {
+    margin-left: 1rem;
+}

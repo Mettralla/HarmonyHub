@@ -1,0 +1,78 @@
+.music-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.music-player.is-playing {
+    transform: translateY(0);
+}
+
+.player-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.cover img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.info {
+    margin-right: 4rem;
+}
+
+.track-name,
+.artist-name {
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+
+.play-btn {
+    background-color: #1db954;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.progress-bar {
+    display: flex;
+    flex: 1;
+    margin-left: 2rem;
+    width: 100%;
+} 
+
+.progress-slider {
+    flex-grow: 1;
+    width: 30vw;
+}
+
+.time-info {
+    margin-left: 1rem;
+}
+
+.volume-slider,
+.progress-slider {
+    margin-left: 1rem;
+}
