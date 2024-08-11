@@ -1,11 +1,13 @@
+import { useAuth } from "../context/AuthContext";
+import ProfileDetailsHeader from "./ProfileDetailsHeader";
+
 function Profile() { 
+  const { user__id } = useAuth("state");
+
   return (
     <div className="section">
-      <h1 className="title">Profile</h1>
-      <div className="box">
-        <p>Nombre: Juan Pérez</p>
-        <p>Email: juan.perez@example.com</p>
-      </div>
+      <ProfileDetailsHeader id={user__id} />
+      
     </div>
   )
 }
