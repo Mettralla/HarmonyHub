@@ -37,7 +37,6 @@ function RecommendedAlbums() {
           <h2 className="title is-4">Álbumes Recomendados</h2>
         </div>
         <div className="level-right">
-          {/* <button className="button is-link">Ver más</button> */}
           <Link to="/albums" className="button is-link">
             Ver más
           </Link>
@@ -47,6 +46,7 @@ function RecommendedAlbums() {
         {albums.slice(0, 5).map((album) => (
           <div key={album.id} className="column is-one-fifth">
             <div className="card">
+            <Link to={`/albums/${album.id}`} className="card">
               <div className="card-image">
                 <figure className="image is-square">
                   <img
@@ -58,6 +58,7 @@ function RecommendedAlbums() {
               <div className="card-content">
                 <p className="title is-6">{album.title}</p>
               </div>
+            </Link>
             </div>
           </div>
         ))}

@@ -36,9 +36,10 @@ function AlbumList() {
           <div key={album.id} className="column">
             <AlbumCard
               key={album.id}
+              id={album.id}
               cover={album.cover}
               title={album.title}
-              year={album.year || "N/A"}
+              year={album.artist}
             />
           </div>
         ))}

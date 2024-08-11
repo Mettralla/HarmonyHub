@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import CoverDefault from "../assets/cover-default.png";
 // import PlayContext from "../context/PlayContext";
+import { Link } from "react-router-dom";
 
 RecommendedSongs.propTypes = {
   songs: PropTypes.array,
@@ -33,9 +34,9 @@ function RecommendedSongs() {
     <div className="recommended-songs box">
       <div className="header">
         <h2 className="title">Canciones</h2>
-        <button className="button is-link is-small search-button">
+        <Link to="/songs" className="button is-link is-small search-button">
           <i className="fa fa-search" aria-hidden="true"></i>
-        </button>
+        </Link>
       </div>
       <div className="songs-list">
         {songs.slice(0, 5).map((song) => (

@@ -1,0 +1,38 @@
+.album-page-container {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    /* Espacio entre la imagen y los detalles */
+    /* background-color: #fff; */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.album-cover {
+    max-width: 300px;
+    /* Limitar el tamaño de la portada */
+    margin: 0;
+}
+
+.cover-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.album-details {
+    flex-grow: 1;
+}
+
+.album-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.album-artist-year {
+    font-size: 1.2em;
+    color: #777;
+    margin-top: 0;
+}
