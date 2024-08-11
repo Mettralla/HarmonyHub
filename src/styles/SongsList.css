@@ -1,0 +1,21 @@
+.songs-list-container {
+    padding: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 1.5em;
+}
+
+.songs-list {
+    display: flex;
+    flex-direction: column;
+}
