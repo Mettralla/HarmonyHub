@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import AvatarDefault from "../assets/avatar-default.png";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 RecommendedArtists.propTypes = {
   artists: PropTypes.array,
@@ -31,13 +32,17 @@ function RecommendedArtists() {
     <div className="recommended-artists box">
       <div className="level">
         <h2 className="title">Artistas</h2>
-        <button className="button is-link is-small search-button">
+        <Link to="/artists" className="button is-link is-small search-button">
           <i className="fa fa-search" aria-hidden="true"></i>
-        </button>
+        </Link>
       </div>
       <div className="artists-list">
         {artists.map((artist) => (
-          <ArtistCard key={artist.id} image={!artist.image ? AvatarDefault : artist.image} name={artist.name} />
+          <ArtistCard
+            key={artist.id}
+            image={!artist.image ? AvatarDefault : artist.image}
+            name={artist.name}
+          />
         ))}
       </div>
     </div>

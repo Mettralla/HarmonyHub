@@ -1,0 +1,44 @@
+.artist-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.artist-card:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.artist-image {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.artist-info {
+    flex-grow: 1;
+    padding-left: 1rem;
+}
+
+.artist-name {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.artist-bio {
+    font-size: 0.5em;
+    color: #777;
+    margin: 0;
+}
+
+.artist-play {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}

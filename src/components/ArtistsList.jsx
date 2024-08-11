@@ -1,44 +1,43 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import AlbumCard from "./AlbumCard";
-import "../styles/AlbumList.css";
+import ArtistListCard from "./ArtistListCard";
+import "../styles/ArtistsList.css";
 
-function AlbumList() {
-  const [albums, setAlbums] = useState([]);
+function ArtistsList() {
+  const [artists, setArtists] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
-    const fetchAlbums = async () => {
+    const fetchArtists = async () => {
       try {
         const response = await axios.get(
-          `https://sandbox.academiadevelopers.com/harmonyhub/albums?page=${page}`
+          `https://sandbox.academiadevelopers.com/harmonyhub/artists?page=${page}`
         );
-        setAlbums(response.data.results);
+        setArtists(response.data.results);
         setTotalPages(
           Math.ceil(response.data.count / response.data.results.length)
         );
       } catch (error) {
-        console.error("Error fetching the albums:", error);
+        console.error("Error fetching the artists:", error);
       }
     };
 
-    fetchAlbums();
+    fetchArtists();
   }, [page]);
 
   return (
-    <div className="album-list-container box">
+    <div className="artists-list-container box">
       <div className="header">
-        <h2 className="title">Albums</h2>
+        <h2 className="title">Artistas</h2>
       </div>
-      <div className="albums-list columns is-multiline">
-        {albums.map((album) => (
-          <div key={album.id} className="column">
-            <AlbumCard
-              key={album.id}
-              cover={album.cover}
-              title={album.title}
-              year={album.year || "N/A"}
+      <div className="artists-list columns is-multiline">
+        {artists.map((artist) => (
+          <div key={artist.id} className="column">
+            <ArtistListCard
+              key={artist.id}
+              image={artist.image}
+              name={artist.name}
             />
           </div>
         ))}
@@ -68,4 +67,4 @@ function AlbumList() {
   );
 }
 
-export default AlbumList;
+export default ArtistsList;
