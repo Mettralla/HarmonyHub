@@ -1,6 +1,7 @@
 import "../styles/SearchBar.css";
 import ThemeContext from "../context/ThemeContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 function SearchBar() { 
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -15,6 +16,15 @@ function SearchBar() {
             aria-hidden="true"
           ></i>
         </button>
+
+        <Link to={"/login"} className="button ml-2">
+          <i
+            className={
+              theme === "light" ? "fa fa-user fa-1x" : "fa fa-user fa-1x"
+            }
+            aria-hidden="true"
+          ></i>
+        </Link>
       </div>
     </nav>
   );
