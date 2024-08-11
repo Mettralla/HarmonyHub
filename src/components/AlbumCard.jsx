@@ -23,8 +23,8 @@ function AlbumCard({ key, id, cover, title, year }) {
         />
       </figure>
       <div className="album-info">
-        <p className="album-title">{title}</p>
-        <p className="album-year">
+        <p className="title">{title}</p>
+        <p className="subtitle mt-1">
           {<ArtistName artistId={year} />}
         </p>
       </div>

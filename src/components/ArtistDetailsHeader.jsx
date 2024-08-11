@@ -38,8 +38,8 @@ function ArtistDetailsHeader({artist}) {
         />
       </figure>
       <div className="album-details">
-        <h2 className="album-title">{artist.name}</h2>
-        <p className="album-artist-year">
+        <h2 className="title">{artist.name}</h2>
+        <p className="subtitle mt-1">
           {artist.bio === null ? null : `${artist.bio}`}{" "}
           {artist.website === null ? null : `- Website: ${artist.website}`}
         </p>

@@ -100,6 +100,22 @@ function MenuSection({title}) {
             </Link>
           </li>
         </div>
+
+        <div className="navbar__li-box">
+          <li className="navbar__li">
+            <Link
+              to="/songs/add"
+              className={`navbar-item ${
+                theme === "light"
+                  ? "has-text-dark light-mode"
+                  : "has-text-white dark-mode"
+              }`}
+            >
+              <i className="fa fa-user fa-1x itemLogo" aria-hidden="true"></i>{" "}
+              Crear Cancion
+            </Link>
+          </li>
+        </div>
       </ul>
     </div>
   );

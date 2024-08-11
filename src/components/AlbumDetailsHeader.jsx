@@ -43,8 +43,8 @@ function AlbumDetailsHeader() {
         />
       </figure>
       <div className="album-details">
-        <h2 className="album-title">{album.title}</h2>
-        <p className="album-artist-year">
+        <h2 className="title">{album.title}</h2>
+        <p className="subtitle mt-1">
           <ArtistName artistId={album.artist} /> - {album.year || "N/A"}
         </p>
       </div>

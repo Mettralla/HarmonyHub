@@ -8,6 +8,8 @@ import ShowArtistSongs from "../components/ShowArtistSongs.jsx";
 import LoginPage from "../components/Auth/LoginPage.jsx";
 import Layout from "./Layout.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
+import NewSong from "../components/Songs/NewSong.jsx";
+import UpdateSong from "../components/Songs/UpdateSong.jsx";
 
 import { createBrowserRouter } from "react-router-dom";
 
@@ -47,7 +49,28 @@ const Router = createBrowserRouter([
       },
       {
         path: "songs",
-        element: <SongsPage />,
+        children: [
+          {
+            index: true,
+            element: <SongsPage />,
+          },
+          {
+            path: "add",
+            element: (
+              <ProtectedRoute>
+                <NewSong />
+              </ProtectedRoute>
+            ),
+          },
+          {
+            path: "edit/:id",
+            element: (
+              <ProtectedRoute>
+                <UpdateSong />
+              </ProtectedRoute>
+            ),
+          },
+        ],
       },
       {
         path: "login",
