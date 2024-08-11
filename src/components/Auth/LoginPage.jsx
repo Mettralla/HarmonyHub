@@ -18,7 +18,7 @@ function LoginPage() {
       let responseData;
 
       axios
-        .post(`${import.meta.env.VITE_API_BASE_URL}api-auth/`, {
+        .post("https://sandbox.academiadevelopers.com/api-auth/", {
           username: usernameRef.current.value,
           password: passwordRef.current.value,
         })
@@ -28,9 +28,7 @@ function LoginPage() {
 
           if (responseData.token) {
             return axios.get(
-              `${
-                import.meta.env.VITE_API_BASE_URL
-              }users/profiles/profile_data/`,
+              "https://sandbox.academiadevelopers.com/users/profiles/profile_data/",
               {
                 headers: {
                   Authorization: `Token ${responseData.token}`,
