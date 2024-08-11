@@ -40,6 +40,7 @@ function RecommendedArtists() {
         {artists.map((artist) => (
           <ArtistCard
             key={artist.id}
+            id={artist.id}
             image={!artist.image ? AvatarDefault : artist.image}
             name={artist.name}
           />

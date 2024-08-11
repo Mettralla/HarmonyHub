@@ -1,14 +1,16 @@
 import PropTypes from "prop-types";
 import AvatarDefault from "../assets/avatar-default.png";
+import { Link } from "react-router-dom";
 
 ArtistListCard.propTypes = {
   key: PropTypes.number,
+  id: PropTypes.number,
   image: PropTypes.string,
   name: PropTypes.string,
   bio: PropTypes.string,
 };
 
-function ArtistListCard({ key, image, name }) {
+function ArtistListCard({ key, id, image, name }) {
   return (
     <div className="artist-card has-background-dark">
       <figure key={key} className="image is-48x48">
@@ -22,7 +24,9 @@ function ArtistListCard({ key, image, name }) {
         <p className="artist-name">{name}</p>
       </div>
       <div className="artist-play">
-        <button className="button is-primary is-small">Play</button>
+        <Link to={`/artists/${id}`} className="button is-primary is-small">
+          Discografia
+        </Link>
       </div>
     </div>
   );

@@ -36,6 +36,7 @@ function ArtistsList() {
           <div key={artist.id} className="column">
             <ArtistListCard
               key={artist.id}
+              id={artist.id}
               image={artist.image}
               name={artist.name}
             />
