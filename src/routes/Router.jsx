@@ -10,6 +10,7 @@ import Layout from "./Layout.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import NewSong from "../components/Songs/NewSong.jsx";
 import UpdateSong from "../components/Songs/UpdateSong.jsx";
+import Error404 from "../components/Error404.jsx";
 
 import { createBrowserRouter } from "react-router-dom";
 
@@ -88,7 +89,7 @@ const Router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <h1>Not Found</h1>,
+    element: <Error404 />,
   },
 ]);
 

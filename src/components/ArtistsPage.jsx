@@ -1,12 +1,13 @@
 import Banner from "./Banner";
 import ArtistsList from "./ArtistsList";
+import Bnr from "../assets/banners01.jpg";
 
 function ArtistsPage() {
     return (
       <div className="section">
         <Banner
-          imageUrl="https://via.placeholder.com/1500x500"
-          buttonLabel="Ver más"
+          imageUrl={Bnr}
+          buttonLabel="Agregar Artista"
           buttonLink="#"
         />
 

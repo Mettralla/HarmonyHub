@@ -1,5 +1,6 @@
 import '../styles/Banner.css';
 import PropTypes from "prop-types";
+import { Link } from 'react-router-dom';
 
 Banner.propTypes = {
   imageUrl: PropTypes.string,
@@ -12,9 +13,9 @@ function Banner({ imageUrl, buttonLabel, buttonLink }) {
     <section className="banner hero is-medium">
       <img src={imageUrl} alt="Banner" className="banner-image" />
       <div className="banner-button-container">
-        <a href={buttonLink} className="button is-primary is-light banner-button">
+        <Link to={buttonLink} className="button is-primary is-light banner-button">
           {buttonLabel}
-        </a>
+        </Link>
       </div>
     </section>
   );

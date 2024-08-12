@@ -53,6 +53,14 @@ function MenuSection({title}) {
           </li>
         </div>
 
+        <p
+          className={`menu-label ${
+            theme === "light" ? "has-text-dark" : "has-text-white"
+          }`}
+        >
+          Visualizar
+        </p>
+
         <div className="navbar__li-box">
           <li className="navbar__li">
             <Link
@@ -64,7 +72,7 @@ function MenuSection({title}) {
               }`}
             >
               <i className="fa fa-user fa-1x itemLogo" aria-hidden="true"></i>{" "}
-              Ver Albums
+              Albums
             </Link>
           </li>
         </div>
@@ -80,7 +88,7 @@ function MenuSection({title}) {
               }`}
             >
               <i className="fa fa-user fa-1x itemLogo" aria-hidden="true"></i>{" "}
-              Ver Artistas
+              Artistas
             </Link>
           </li>
         </div>
@@ -96,10 +104,18 @@ function MenuSection({title}) {
               }`}
             >
               <i className="fa fa-user fa-1x itemLogo" aria-hidden="true"></i>{" "}
-              Ver Canciones
+              Canciones
             </Link>
           </li>
         </div>
+
+        <p
+          className={`menu-label ${
+            theme === "light" ? "has-text-dark" : "has-text-white"
+          }`}
+        >
+          Agregar
+        </p>
 
         <div className="navbar__li-box">
           <li className="navbar__li">
@@ -112,7 +128,7 @@ function MenuSection({title}) {
               }`}
             >
               <i className="fa fa-user fa-1x itemLogo" aria-hidden="true"></i>{" "}
-              Crear Cancion
+              Canciones
             </Link>
           </li>
         </div>

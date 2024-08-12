@@ -1,14 +1,15 @@
 import Banner from "./Banner";
 import SongsList from "./SongsList";
 import MusicPlayer from "./MusicPlayer";
+import Bnr from "../assets/banners01.jpg";
 
 function SongsPage() {
     return (
       <div className="section">
         <Banner
-          imageUrl="https://via.placeholder.com/1500x500"
-          buttonLabel="Ver más"
-          buttonLink="#"
+          imageUrl={Bnr}
+          buttonLabel="Agregar Cancion"
+          buttonLink="/songs/add"
         />
         <SongsList />
         <MusicPlayer />

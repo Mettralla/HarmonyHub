@@ -4,15 +4,15 @@ import RecommendedSongs from "./RecommendedSongs";
 import RecommendedArtists from "./RecommendedArtists";
 import MusicPlayer from "./MusicPlayer";
 import "../styles/Home.css"
-
+import Bnr from "../assets/banners01.jpg";
 
 function Home() { 
   return (
     <div className="section">
       <Banner
-        imageUrl="https://via.placeholder.com/1500x500"
-        buttonLabel="Ver más"
-        buttonLink="#"
+        imageUrl={Bnr}
+        buttonLabel="Ver Perfil"
+        buttonLink="/profile"
       />
       <RecommendedAlbums />
       <div className="recommended-section">
