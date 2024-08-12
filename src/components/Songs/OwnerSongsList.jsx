@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import PlayContext from "../../context/PlayContext";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import axios from "axios";
 
@@ -34,7 +34,7 @@ function OwnerSongsList({ key, id, cover, title, year, songFile }) {
   };
 
   const { token } = useAuth("state");
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleDelete = () => {
     if (window.confirm("¿Estás seguro de que quieres eliminar esta canción?")) {
@@ -48,7 +48,7 @@ function OwnerSongsList({ key, id, cover, title, year, songFile }) {
           }
         )
         .then(() => {
-          window.location.href = "/profile";
+          navigate("/");
         })
         .catch((error) => {
           console.error("Error al eliminar la canción", error);
