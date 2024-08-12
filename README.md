@@ -1,7 +1,7 @@
 <p align="center">
 <img src="./src/assets/banners01.jpg" alt="Banner">
 </p>
-<h3 align="center">HarmonyHub - Ruby on Rails</h3>
+<h3 align="center">HarmonyHub - React</h3>
 
 ---
 
