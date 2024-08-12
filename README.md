@@ -57,9 +57,7 @@ npm run dev
 - react-dom: "^18.3.1",
 - react-router-dom: "^6.26.0"
 
-## 📮 Documentacion Postman <a name = "postman"></a>
-
-## ✍️ Autores <a name = "authors"></a>
+## ✍️ Autor <a name = "authors"></a>
 - [Daniel Tejerina](https://github.com/Mettralla) - [Linkedin](https://www.linkedin.com/in/daniel-alejandro-tejerina/)
 
 ***
