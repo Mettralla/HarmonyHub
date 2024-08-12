@@ -13,7 +13,7 @@ function Banner({ imageUrl, buttonLabel, buttonLink }) {
     <section className="banner hero is-medium">
       <img src={imageUrl} alt="Banner" className="banner-image" />
       <div className="banner-button-container">
-        <Link to={buttonLink} className="button is-primary is-light banner-button">
+        <Link to={buttonLink} className="button is-primary has-text-dark banner-button">
           {buttonLabel}
         </Link>
       </div>
