@@ -9,6 +9,15 @@ RecommendedAlbums.propTypes = {
   albums: PropTypes.array,
 };
 
+/**
+ * Componente que muestra una fila de álbumes recomendados.
+ * Recupera los primeros 5 albumes de la API de la Academia.
+ * Cada álbum se muestra como una tarjeta con su imagen de portada y título.
+ * Al hacer clic en una tarjeta, se redirige a la página de detalles del álbum.
+ *
+ * @component
+ * @returns {JSX.Element} 
+ */
 function RecommendedAlbums() {
   const [albums, setAlbums] = useState([]);
 

@@ -1,5 +1,12 @@
 import { useState } from "react";
 
+/**
+ * Hook personalizado para manejar el estado de reproducción de una canción.
+ * Incluye estado para controlar la reproducción, la información de la canción
+ * y funciones para actualizar este estado.
+ * 
+ * @returns {Array} 
+ */
 function usePlay() {
   const [play, setPlay] = useState(false);
   const [id, setId] = useState(null);

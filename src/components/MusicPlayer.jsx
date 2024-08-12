@@ -1,45 +1,45 @@
 import "../styles/MusicPlayer.css"; 
 import PlayContext from "../context/PlayContext";
 import { useContext, useEffect, useState, useRef } from "react";
-// import axios from "axios";
 import CoverDefault from "../assets/cover-default.png";
 
+/**
+ * Componente del reproductor de música que permite reproducir, pausar, ajustar el volumen,
+ * y mostrar el progreso de una canción. Los datos del reproductor se obtienen del contexto `PlayContext`.
+ *
+ * @component
+ * @returns {JSX.Element}
+ */
 function MusicPlayer() {
-  const { play, togglePlay, id, title, songFile, year, cover } = useContext(PlayContext);
-  // const [song, setSong] = useState([]);
-  const [volume, setVolume] = useState(0.5); 
-  const [currentTime, setCurrentTime] = useState(0); 
-  const [duration, setDuration] = useState(0); 
-  const audioRef = useRef(null); 
+  const { play, togglePlay, id, title, songFile, year, cover } =
+    useContext(PlayContext);
+  const [volume, setVolume] = useState(0.5);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const audioRef = useRef(null);
 
-  // useEffect(() => {
-  //   if (id !== null) {
-  //     const fetchSong = async () => {
-  //       try {
-  //         const response = await axios.get(
-  //           `http://sandbox.academiadevelopers.com/harmonyhub/songs/${id}`
-  //         );
-  //         setSong(response.data);
-  //       } catch (error) {
-  //         console.error("Error recuperando canciones: ", error);
-  //       }
-  //     };
-
-  //     fetchSong();
-  //   }
-  // }, [id]);
-
+  /**
+   * Actualiza el volumen del audio y controla la reproducción de la canción
+   * en función del estado `play` y el valor de `volume`.
+   */
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = volume; 
-      play ? audioRef.current.play() : audioRef.current.pause(); 
+      audioRef.current.volume = volume;
+      play ? audioRef.current.play() : audioRef.current.pause();
     }
-  }, [play, volume]); 
+  }, [play, volume]);
 
+  /**
+   * Maneja el cambio en el control deslizante de volumen, actualizando el estado `volume`.
+   *
+   * @param {Object} e - Evento del cambio de volumen.
+   */
   const handleVolumeChange = (e) => {
     setVolume(e.target.value);
   };
 
+
+  // Actualiza el estado `currentTime` y `duration` en función del progreso del audio.
   const handleTimeUpdate = () => {
     if (audioRef.current) {
       setCurrentTime(audioRef.current.currentTime);
@@ -47,6 +47,12 @@ function MusicPlayer() {
     }
   };
 
+  /**
+   * Formatea el tiempo en minutos y segundos desde el valor en segundos.
+   *
+   * @param {number} seconds - Tiempo en segundos.
+   * @returns {string} Tiempo formateado en `mm:ss`.
+   */
   const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
@@ -65,7 +71,6 @@ function MusicPlayer() {
             <p className="artist-name">{year}</p>
           </div>
           <div className="controls">
-            {/* Control de volumen */}
             <input
               type="range"
               min="0"
@@ -74,7 +79,7 @@ function MusicPlayer() {
               value={volume}
               onChange={handleVolumeChange}
               className="volume-slider"
-              />
+            />
 
             {songFile && (
               <div className="control-group">
@@ -83,7 +88,7 @@ function MusicPlayer() {
                     ref={audioRef}
                     src={songFile}
                     onTimeUpdate={handleTimeUpdate}
-                    />
+                  />
                 </div>
 
                 <div className="progress-bar">
@@ -98,12 +103,15 @@ function MusicPlayer() {
                         audioRef.current.currentTime = e.target.value;
                       }
                     }}
-                    />
+                  />
                   <div className="time-info">
                     <span className="current-time">
                       {formatTime(currentTime)}
                     </span>{" "}
-                    /<span className="duration-time">{formatTime(duration)}</span>
+                    /
+                    <span className="duration-time">
+                      {formatTime(duration)}
+                    </span>
                   </div>
                 </div>
               </div>

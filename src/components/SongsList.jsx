@@ -4,6 +4,14 @@ import SongsListCard from "./SongsListCard";
 import CoverDefault from "../assets/cover-default.png";
 import "../styles/SongsList.css";
 
+/**
+ * Componente para mostrar una lista de canciones con paginación.
+ * 
+ * Este componente realiza una solicitud a la API para obtener las canciones,
+ * maneja la paginación de los resultados y muestra cada canción en un componente `SongsListCard`.
+ * 
+ * @returns {JSX.Element} 
+ */
 function SongsList() {
     const [songs, setSongs] = useState([]);
     const [page, setPage] = useState(1);

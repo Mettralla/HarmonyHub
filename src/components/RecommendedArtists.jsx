@@ -10,6 +10,15 @@ RecommendedArtists.propTypes = {
   artists: PropTypes.array,
 };
 
+/**
+ * Componente que muestra una lista de artistas recomendados.
+ * Recupera los primeros 5 artistas de la API de la Academia.
+ * Cada artista se muestra como una tarjeta con su imagen y nombre.
+ * Al hacer clic en una tarjeta, se redirige a la página de detalles del artista.
+ *
+ * @component
+ * @returns {JSX.Element}
+ */
 function RecommendedArtists() {
   const [artists, setArtist] = useState([]);
 

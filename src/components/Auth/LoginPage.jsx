@@ -2,6 +2,13 @@ import { useRef, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import axios from "axios";
 
+/**
+ * Componente de inicio de sesión que permite a los usuarios autenticar sus credenciales.
+ * 
+ * Maneja el estado de carga, errores y realiza la autenticación con la API.
+ * 
+ * @returns {JSX.Element}
+ */
 function LoginPage() {
   const usernameRef = useRef("");
   const passwordRef = useRef("");
@@ -10,6 +17,11 @@ function LoginPage() {
 
   const { login } = useAuth("actions");
 
+  /**
+   * Maneja el envío del formulario de inicio de sesión.
+   *
+   * @param {Event} event
+   */
   function handleSubmit(event) {
     event.preventDefault();
     if (!isLoading) {

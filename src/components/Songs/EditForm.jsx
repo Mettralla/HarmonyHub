@@ -4,6 +4,14 @@ import { useAuth } from "../../context/AuthContext";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
+/**
+ * Componente de formulario para editar los detalles de una canción.
+ * 
+ * Carga los datos de la canción a editar, permite al usuario modificar la información
+ * y envía los cambios a la API.
+ * 
+ * @returns {JSX.Element} 
+ */
 function EditForm() {
   const { id } = useParams();
   const [songData, setSongData] = useState({ title: "", year: "", album: "" });

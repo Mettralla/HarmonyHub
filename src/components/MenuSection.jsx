@@ -71,7 +71,7 @@ function MenuSection({title}) {
                   : "has-text-white dark-mode"
               }`}
             >
-              <i className="fa fa-user fa-1x itemLogo" aria-hidden="true"></i>{" "}
+              <i className="fa fa-music fa-1x itemLogo" aria-hidden="true"></i>{" "}
               Albums
             </Link>
           </li>
@@ -87,7 +87,7 @@ function MenuSection({title}) {
                   : "has-text-white dark-mode"
               }`}
             >
-              <i className="fa fa-user fa-1x itemLogo" aria-hidden="true"></i>{" "}
+              <i className="fa fa-music fa-1x itemLogo" aria-hidden="true"></i>{" "}
               Artistas
             </Link>
           </li>
@@ -103,7 +103,7 @@ function MenuSection({title}) {
                   : "has-text-white dark-mode"
               }`}
             >
-              <i className="fa fa-user fa-1x itemLogo" aria-hidden="true"></i>{" "}
+              <i className="fa fa-music fa-1x itemLogo" aria-hidden="true"></i>{" "}
               Canciones
             </Link>
           </li>
@@ -127,7 +127,7 @@ function MenuSection({title}) {
                   : "has-text-white dark-mode"
               }`}
             >
-              <i className="fa fa-user fa-1x itemLogo" aria-hidden="true"></i>{" "}
+              <i className="fa fa-music fa-1x itemLogo" aria-hidden="true"></i>{" "}
               Canciones
             </Link>
           </li>

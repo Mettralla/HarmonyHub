@@ -5,6 +5,11 @@ import CoverDefault from "../../assets/cover-default.png";
 import OwnerSongsList from "./OwnerSongsList";
 import { useAuth } from "../../context/AuthContext";
 
+/**
+ * Componente que renderiza una lista de canciones creadas por el usuario.
+ * 
+ * @returns {JSX.Element}
+ */
 function OwnerSongs() {
 const { user__id } = useAuth("state");
   const [songs, setSongs] = useState([]);

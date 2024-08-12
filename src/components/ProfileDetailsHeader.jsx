@@ -9,7 +9,21 @@ ProfileDetailsHeader.propTypes = {
   id: PropTypes.number,
 };
 
-function ProfileDetailsHeader(id) {
+/**
+ * Componente que muestra los detalles del perfil del usuario.
+ * Incluye la foto de perfil, nombre completo y correo electrónico del usuario.
+ * 
+ * Utiliza el hook `useAuth` para obtener el token de autenticación y realizar la solicitud de datos.
+ * 
+ * @component
+ * @example
+ * return (
+ *   <ProfileDetailsHeader id={1} />
+ * )
+ * @param {number} id - ID del perfil de usuario a mostrar.
+ * @returns {JSX.Element} La vista de detalles del perfil del usuario.
+ */
+function ProfileDetailsHeader({id}) {
   const [profileData, setProfileData] = useState({});
   const { token } = useAuth("state");
 

@@ -11,6 +11,15 @@ RecommendedSongs.propTypes = {
   songs: PropTypes.array,
 };
 
+/**
+ * Componente que muestra una lista de canciones recomendadas.
+ * Recupera las primeras 5 canciones de la API de la Academia.
+ * Cada canción se muestra en una tarjeta con su cover, título, y año de lanzamiento.
+ * Al hacer clic en la tarjeta de una canción, se puede redirigir a la página de detalles de la canción.
+ *
+ * @component
+ * @returns {JSX.Element}
+ */
 function RecommendedSongs() {
   const [songs, setSongs] = useState([]);
   // const {play, togglePlay} = useContext(PlayContext);
